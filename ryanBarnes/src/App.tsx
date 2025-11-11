@@ -175,7 +175,6 @@ function App() {
           <div className="stats-grid">
             <div className="stats-category">
               <h3 className="category-title">
-                <span className="icon">⚾</span>
                 Catchings Stats
               </h3>
               <div className="stats-cards">
@@ -190,7 +189,6 @@ function App() {
             
             <div className="stats-category">
               <h3 className="category-title">
-                <span className="icon">🏏</span>
                 Hitting Stats
               </h3>
               <div className="stats-cards">
