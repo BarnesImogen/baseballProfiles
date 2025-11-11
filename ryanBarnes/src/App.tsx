@@ -166,6 +166,61 @@ function App() {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section id="stats" className="stats-section">
+        <div className="container">
+          <h2 className="section-title">Player Statistics Summer 2025</h2>
+          <h3 className="games-played">Games Played: 7</h3>
+          
+          <div className="stats-grid">
+            <div className="stats-category">
+              <h3 className="category-title">
+                <span className="icon">⚾</span>
+                Catchings Stats
+              </h3>
+              <div className="stats-cards">
+                {playerData.stats.catching.map((stat, index) => (
+                  <div key={index} className="stat-card">
+                    <div className="stat-value">{stat.value}</div>
+                    <div className="stat-label">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="stats-category">
+              <h3 className="category-title">
+                <span className="icon">🏏</span>
+                Hitting Stats
+              </h3>
+              <div className="stats-cards">
+                {playerData.stats.hitting.map((stat, index) => (
+                  <div key={index} className="stat-card">
+                    <div className="stat-value">{stat.value}</div>
+                    <div className="stat-label">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="achievements" className="achievements">
+        <div className="container">
+          <h2 className="section-title">Baseball Experience</h2>
+          <div className="achievements-grid">
+            {playerData.experience.map((item, index) => (
+              <div key={index} className="achievement-card">
+                <span className="achievement-icon">⚾</span>
+                <p>{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery Section */}
       <section className="gallery">
         <div className="container">
@@ -225,61 +280,6 @@ function App() {
           </div>
         </div>
       )}
-
-      {/* Stats Section */}
-      <section id="stats" className="stats-section">
-        <div className="container">
-          <h2 className="section-title">Player Statistics Summer 2025</h2>
-          <h3 className="games-played">Games Played: 7</h3>
-          
-          <div className="stats-grid">
-            <div className="stats-category">
-              <h3 className="category-title">
-                <span className="icon">⚾</span>
-                Catchings Stats
-              </h3>
-              <div className="stats-cards">
-                {playerData.stats.catching.map((stat, index) => (
-                  <div key={index} className="stat-card">
-                    <div className="stat-value">{stat.value}</div>
-                    <div className="stat-label">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="stats-category">
-              <h3 className="category-title">
-                <span className="icon">🏏</span>
-                Hitting Stats
-              </h3>
-              <div className="stats-cards">
-                {playerData.stats.hitting.map((stat, index) => (
-                  <div key={index} className="stat-card">
-                    <div className="stat-value">{stat.value}</div>
-                    <div className="stat-label">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="achievements" className="achievements">
-        <div className="container">
-          <h2 className="section-title">Baseball Experience</h2>
-          <div className="achievements-grid">
-            {playerData.experience.map((item, index) => (
-              <div key={index} className="achievement-card">
-                <span className="achievement-icon">⚾</span>
-                <p>{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="contact">
