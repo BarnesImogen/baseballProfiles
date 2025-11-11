@@ -139,7 +139,6 @@ html {
   justify-content: center;
   padding: 6rem 2rem 4rem;
   background: url('/images/catcher-3.jpg') center/cover no-repeat;
-  background-attachment: fixed;
   overflow: hidden;
 }
 
@@ -697,7 +696,7 @@ html {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -801,6 +800,19 @@ html {
 
   .hero {
     padding: 5rem 1.5rem 3rem;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  .contact {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contact::before {
+    background-size: cover;
+    background-position: center;
   }
 
   .hero-stats-grid {
