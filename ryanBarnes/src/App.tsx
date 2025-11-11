@@ -55,12 +55,12 @@ function App() {
   }
 
   const galleryImages = [
-    { src: '/images/catcher-1.jpg', alt: 'Ryan Barnes catching' },
-    { src: '/images/batting-1.jpg', alt: 'Ryan Barnes batting' },
-    { src: '/images/catcher-2.jpg', alt: 'Ryan Barnes in catcher position' },
-    { src: '/images/teamwork.jpg', alt: 'Ryan Barnes with teammate' },
-    { src: '/images/batting-2.jpg', alt: 'Ryan Barnes batting swing' },
-    { src: '/images/action.jpg', alt: 'Ryan Barnes game action' }
+    { src: `${import.meta.env.BASE_URL}images/catcher-1.jpg`, alt: 'Ryan Barnes catching' },
+    { src: `${import.meta.env.BASE_URL}images/batting-1.jpg`, alt: 'Ryan Barnes batting' },
+    { src: `${import.meta.env.BASE_URL}images/catcher-2.jpg`, alt: 'Ryan Barnes in catcher position' },
+    { src: `${import.meta.env.BASE_URL}images/teamwork.jpg`, alt: 'Ryan Barnes with teammate' },
+    { src: `${import.meta.env.BASE_URL}images/batting-2.jpg`, alt: 'Ryan Barnes batting swing' },
+    { src: `${import.meta.env.BASE_URL}images/action.jpg`, alt: 'Ryan Barnes game action' }
   ]
 
   const openLightbox = (index: number) => {
