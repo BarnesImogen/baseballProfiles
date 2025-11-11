@@ -1,0 +1,342 @@
+/* Home Page Styles */
+.home-page {
+  min-height: 100vh;
+  background: var(--bg-light);
+}
+
+/* Header */
+.home-header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #DC0000 100%);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  color: white;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.site-title .baseball-icon {
+  font-size: 1em;
+  animation: spin 20s linear infinite;
+}
+
+.site-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  opacity: 0.9;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Search Section */
+.search-section {
+  background: var(--bg-gray);
+  padding: 3rem 2rem;
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1.25rem 3.5rem 1.25rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--border);
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(220, 0, 0, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+/* Players Section */
+.players-section {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.players-container .section-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Player Card */
+.player-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px var(--shadow);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.player-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px var(--shadow-lg);
+}
+
+.player-card-header {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.graduation-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.player-card-body {
+  padding: 2rem;
+  flex: 1;
+}
+
+.player-name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: var(--text-dark);
+}
+
+.player-nickname {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.player-position {
+  font-size: 1rem;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.player-quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--bg-gray);
+}
+
+.quick-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quick-stat .stat-label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.quick-stat .stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.player-card-footer {
+  padding: 1.5rem 2rem;
+  background: var(--bg-gray);
+  text-align: center;
+}
+
+.view-profile {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.no-results p {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.clear-search {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-search:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* Add Player Section */
+.add-player-section {
+  text-align: center;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.add-player-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--primary);
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(220, 0, 0, 0.3);
+}
+
+.add-player-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(220, 0, 0, 0.4);
+}
+
+.plus-icon {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Footer */
+.home-footer {
+  background: var(--text-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.home-footer p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .players-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-header {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .search-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .players-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .player-card-body {
+    padding: 1.5rem;
+  }
+
+  .player-quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .player-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  .player-name {
+    font-size: 1.5rem;
+  }
+}

@@ -112,6 +112,18 @@ html {
   background: rgba(200, 16, 46, 0.1);
 }
 
+.nav-menu li a.edit-link {
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+}
+
+.nav-menu li a.edit-link:hover {
+  background: var(--primary-dark);
+  color: white;
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
