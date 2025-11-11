@@ -131,7 +131,7 @@ function App() {
           <div className="hero-badge">{playerData.graduationYear}</div>
           <h1 className="hero-title">
             {playerData.name}
-            <span className="hero-subtitle">"{playerData.nickname}"</span>
+            <span className="hero-subtitle">"{playerData.nickname}" - Australian Catcher</span>
           </h1>
           <p className="hero-position">{playerData.position}</p>
           
@@ -297,12 +297,16 @@ function App() {
               <a href={`tel:${playerData.phone}`}>{playerData.phone}</a>
             </div>
             <div className="contact-card">
-              <div className="contact-icon">FL</div>
+              <div className="contact-icon-img">
+                <img src={`${import.meta.env.BASE_URL}images/fieldlevel-logo.png`} alt="Field Level" />
+              </div>
               <h3>Field Level</h3>
               <a href={playerData.fieldLevel} target="_blank" rel="noopener noreferrer">View Profile</a>
             </div>
             <div className="contact-card">
-              <div className="contact-icon">x</div>
+              <div className="contact-icon-img">
+                <img src={`${import.meta.env.BASE_URL}images/twitter-logo.png`} alt="Twitter" />
+              </div>
               <h3>Twitter</h3>
               <a href={playerData.twitter} target="_blank" rel="noopener noreferrer">@BarnseyBaseball</a>
             </div>
